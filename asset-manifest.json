@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/punetori-ui/static/css/main.19c28b83.chunk.css",
+    "main.js": "/punetori-ui/static/js/main.31bc1852.chunk.js",
+    "main.js.map": "/punetori-ui/static/js/main.31bc1852.chunk.js.map",
+    "runtime-main.js": "/punetori-ui/static/js/runtime-main.b2236734.js",
+    "runtime-main.js.map": "/punetori-ui/static/js/runtime-main.b2236734.js.map",
+    "static/js/2.1aae2980.chunk.js": "/punetori-ui/static/js/2.1aae2980.chunk.js",
+    "static/js/2.1aae2980.chunk.js.map": "/punetori-ui/static/js/2.1aae2980.chunk.js.map",
+    "index.html": "/punetori-ui/index.html",
+    "precache-manifest.eea05d8e47c8bb6f099fb61d8d3d01d4.js": "/punetori-ui/precache-manifest.eea05d8e47c8bb6f099fb61d8d3d01d4.js",
+    "service-worker.js": "/punetori-ui/service-worker.js",
+    "static/css/main.19c28b83.chunk.css.map": "/punetori-ui/static/css/main.19c28b83.chunk.css.map",
+    "static/js/2.1aae2980.chunk.js.LICENSE.txt": "/punetori-ui/static/js/2.1aae2980.chunk.js.LICENSE.txt",
+    "static/media/bookmark.svg": "/punetori-ui/static/media/bookmark.6f770f93.svg",
+    "static/media/eye-off.svg": "/punetori-ui/static/media/eye-off.60923ccb.svg",
+    "static/media/eye.svg": "/punetori-ui/static/media/eye.5380c6d1.svg",
+    "static/media/menu.svg": "/punetori-ui/static/media/menu.15028421.svg",
+    "static/media/search.svg": "/punetori-ui/static/media/search.bdbd9ca9.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b2236734.js",
+    "static/js/2.1aae2980.chunk.js",
+    "static/css/main.19c28b83.chunk.css",
+    "static/js/main.31bc1852.chunk.js"
+  ]
+}
