@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "555a4bd6150409e3639e757672bb9af7",
+    "revision": "6b8f448586bfbeaab003372a499ffa08",
     "url": "/punetori-ui/index.html"
   },
   {
