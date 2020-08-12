@@ -78,7 +78,7 @@ export default function Header({ history }) {
       <ul
         className="dropdown-menu"
         style={{
-          top: dropdownMenu ? "40px" : null,
+          transform: dropdownMenu ? "translateY(40px)" : null,
         }}
       >
         {!token ? (
@@ -102,7 +102,7 @@ export default function Header({ history }) {
               <Link to="/account/bookmark">My Bookmarks</Link>
             </li>
             <li onClick={() => logout()} className="logout">
-              Log Out
+              <p>Log Out</p>
             </li>
           </React.Fragment>
         )}

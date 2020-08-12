@@ -133,7 +133,7 @@ a {
 }
 
 .dropdown-menu {
-  transition: top 0.4s;
+  transition: transform 0.4s;
 }
 
 .logout:hover {
@@ -154,10 +154,12 @@ a {
   }
 
   .dropdown-menu {
-    position: fixed;
-    top: -80px;
+    position: absolute;
     left: 0;
     right: 0;
+    top: 0;
+
+    transform: translateY(-200px);
 
     display: flex;
     flex-direction: column;
@@ -169,22 +171,32 @@ a {
   }
 
   .dropdown-menu li {
+    width: 100%;
+    display: flex;
+  }
+
+  .dropdown-menu li a,
+  .dropdown-menu li p {
     padding: 15px;
     width: 100%;
   }
 
-  .dropdown-menu li:hover {
+  .dropdown-menu li a:hover,
+  .dropdown-menu li p:hovers {
     background-color: #2622368f;
   }
 
   .bc {
     display: none;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
-    background-color: #302c4585;
+    background-color: #302c45ec;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
   }
 }
 
@@ -381,6 +393,7 @@ a {
   #search-results,
   .job-table .jobs-wrapper {
     width: var(--small-screen-width);
+    margin: 10px auto 0 auto;
   }
 }
 
@@ -408,6 +421,7 @@ a {
   border: 0;
   border: 1px solid #2622368f;
   border-radius: 3px;
+  /* font-size: 16px; */
 }
 
 .user-form form button {
@@ -440,6 +454,13 @@ a {
   height: 15px;
   animation: spin 1.5s infinite;
 }
+
+@media (max-width: 600px) {
+  .user-form form {
+    width: var(--small-screen-width);
+  }
+}
+
 /* User Form ### End */
 
 /* Update Password ### Start ### */

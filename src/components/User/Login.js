@@ -107,7 +107,7 @@ export default function Login({ history }) {
           <input
             type="text"
             placeholder="Email Address"
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={(e) => setEmail(e.target.value.toLocaleLowerCase())}
             style={
               error
                 ? {
