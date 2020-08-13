@@ -12,6 +12,7 @@
   font-family: "Open Sans", sans-serif;
   color: #afacc3;
   scroll-behavior: smooth;
+  -webkit-appearance: none;
 }
 
 *:focus {
@@ -101,6 +102,8 @@ a {
   border-bottom: 1px solid #2622368f;
   z-index: 5;
   position: relative;
+  left: 0;
+  right: 0;
 }
 
 #header .header-container {
@@ -340,62 +343,6 @@ a {
 /* Search Form ### End ### */
 
 /* Search Results ### Start ### */
-#search-results,
-.job-table .jobs-wrapper {
-  width: var(--main-width);
-  margin: 50px auto 0 auto;
-}
-
-#search-results .results-header,
-.job-table .jobs-wrapper .results-header {
-  background-color: #332f46;
-  padding: 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 0.9em;
-}
-
-#search-results .jobs,
-.job-table .jobs-wrapper .jobs {
-  overflow-y: scroll;
-  height: 60vh;
-  background-color: #37334a;
-  display: flex;
-  flex-direction: column;
-}
-
-#search-results .jobs a,
-.job-table .jobs-wrapper .jobs a {
-  padding: 20px 15px;
-  transition: background-color 0.4s;
-}
-
-#search-results .jobs a p,
-.job-table .jobs-wrapper .jobs a {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-#search-results .jobs a:hover,
-.job-table .jobs-wrapper .jobs a:hover {
-  background-color: #302c45;
-  cursor: pointer;
-}
-
-#search-results .jobs-no,
-.job-table .jobs-wrapper .jobs-no {
-  color: #5b5875;
-}
-
-@media (max-width: 600px) {
-  #search-results,
-  .job-table .jobs-wrapper {
-    width: var(--small-screen-width);
-    margin: 10px auto 0 auto;
-  }
-}
 
 /* Search Results ### End ### */
 
@@ -496,10 +443,58 @@ a {
   cursor: pointer;
 }
 
+/* Update Password ### End ### */
+
+/* Job Table ### Start ### */
+
+.job-table .jobs-wrapper {
+  width: var(--main-width);
+  margin: 50px auto 0 auto;
+}
+
+.job-table .jobs-wrapper .results-header {
+  background-color: #332f46;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9em;
+}
+
+.job-table .jobs-wrapper .jobs {
+  overflow-y: scroll;
+  height: 60vh;
+  background-color: #37334a;
+  display: flex;
+  flex-direction: column;
+}
+
+.job-table .jobs-wrapper .jobs a {
+  padding: 20px 15px;
+  transition: background-color 0.4s;
+}
+
+#search-results .jobs a p,
+.job-table .jobs-wrapper .jobs a {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.job-table .jobs-wrapper .jobs a:hover {
+  background-color: #302c45;
+  cursor: pointer;
+}
+
+.job-table .jobs-wrapper .jobs-no {
+  color: #5b5875;
+}
+
 .job-table .jobs-wrapper .jobs li {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 100%;
 }
 
 .job-table .jobs-wrapper .jobs li a {
@@ -532,4 +527,16 @@ a {
   width: 15px;
 }
 
-/* Update Password ### End ### */
+@media (max-width: 600px) {
+  .job-table .jobs-wrapper {
+    width: var(--small-screen-width);
+    margin: 10px auto 0 auto;
+  }
+
+  .job-table .jobs-wrapper .jobs {
+    overflow-y: show;
+    height: 100%;
+  }
+}
+
+/* Job Table ### End ### */
