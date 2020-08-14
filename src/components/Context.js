@@ -60,9 +60,9 @@ export default class Provider extends Component {
 
   render() {
     if (this.state.dropdownMenu) {
-      document.body.style.overflow = "hidden";
+      document.body.classList.add("body");
     } else {
-      document.body.style.overflowY = "scroll";
+      document.body.classList.remove("body");
     }
     return (
       <Context.Provider value={this.state}>

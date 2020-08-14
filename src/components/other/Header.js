@@ -79,6 +79,9 @@ export default function Header({ history }) {
         style={{
           transform: dropdownMenu ? "translateY(40px)" : null,
         }}
+        onClick={(e) => {
+          setState("dropdown", !dropdownMenu);
+        }}
       >
         {!token ? (
           <React.Fragment>

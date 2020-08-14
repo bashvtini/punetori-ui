@@ -23,6 +23,18 @@ body {
   background-color: #302c45;
 }
 
+@media (max-width: 600px) {
+  .body {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100vh;
+    overflow: hidden;
+  }
+}
+
 ul {
   list-style: none;
 }
