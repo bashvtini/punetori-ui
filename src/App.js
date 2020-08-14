@@ -1,6 +1,7 @@
 import React from "react";
 import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import Provider from "./components/Context";
+import Main from "./components/Main";
 import Search from "./components/Search";
 import Login from "./components/User/Login";
 import Register from "./components/User/Register";
@@ -16,7 +17,8 @@ export default function App() {
     <Provider>
       <Router>
         <Switch>
-          <Route exact path="/" component={Search} />
+          <Route exact path="/" component={Main} />
+          <Route exact path="/search" component={Search} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/register" component={Register} />
           <Route exact path="/account" component={GetUser} />

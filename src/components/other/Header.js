@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../Context";
 import Cookies from "universal-cookie";
@@ -7,8 +7,7 @@ import Cookies from "universal-cookie";
 import DropDownMenu from "../../assets/img/menu.svg";
 
 export default function Header({ history }) {
-  const [dropdownMenu, setDropdownMenu] = useState(false);
-  const { token, setState } = useContext(Context);
+  const { token, setState, dropdownMenu } = useContext(Context);
 
   const logout = () => {
     setState("token", null);
@@ -22,7 +21,7 @@ export default function Header({ history }) {
 
   return (
     <React.Fragment>
-      <div id="header">
+      <div id="header" className={dropdownMenu ? "test" : ""}>
         <div className="header-container">
           <div className="logo">
             <h2>
@@ -32,7 +31,7 @@ export default function Header({ history }) {
 
           <div
             className="dropdown-button"
-            onClick={() => setDropdownMenu(!dropdownMenu)}
+            onClick={() => setState("dropdown", !dropdownMenu)}
           >
             <img src={DropDownMenu} alt="Dropdown Menu Icon" />
           </div>
@@ -72,7 +71,7 @@ export default function Header({ history }) {
         style={{
           display: dropdownMenu ? "block" : null,
         }}
-        onClick={() => setDropdownMenu(!dropdownMenu)}
+        onClick={() => setState("dropdown", !dropdownMenu)}
       ></div>
 
       <ul

@@ -11,6 +11,7 @@ export default class Provider extends Component {
     searchLoading: false,
     searchError: false,
     token: null,
+    dropdownMenu: false,
     setState: (state, data) => {
       switch (state) {
         case "jobs":
@@ -30,6 +31,9 @@ export default class Provider extends Component {
           break;
         case "token":
           this.setState({ token: data });
+          break;
+        case "dropdown":
+          this.setState({ dropdownMenu: data });
           break;
         default:
           break;
@@ -55,6 +59,11 @@ export default class Provider extends Component {
   }
 
   render() {
+    if (this.state.dropdownMenu) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflowY = "scroll";
+    }
     return (
       <Context.Provider value={this.state}>
         {this.props.children}

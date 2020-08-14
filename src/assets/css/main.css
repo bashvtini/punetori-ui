@@ -191,7 +191,7 @@ a {
 
   .bc {
     display: none;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
@@ -204,6 +204,114 @@ a {
 }
 
 /* Header ### End ### */
+
+/* Main Page ### Start ### */
+#main-page .jumbotron {
+  display: flex;
+  width: var(--main-width);
+  margin: 50px auto;
+  justify-content: center;
+  align-items: center;
+}
+
+#main-page .jumbotron .slogan-img img {
+  width: 200px;
+}
+
+#main-page .jumbotron .slogan a {
+  color: #0fa645;
+  padding: 10px 0;
+  display: inline-block;
+}
+
+#main-page .explore h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#main-page .explore .row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 5px;
+  width: var(--main-width);
+  margin: auto;
+}
+
+#main-page .explore .row .col {
+  text-align: center;
+  background-color: #37334a;
+  border-radius: 3px;
+  padding: 10px 0;
+}
+
+#main-page .explore .row .col img {
+  width: 100px;
+}
+
+#main-page .link-search button {
+  background-color: #12ad47;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 3px;
+  color: #d6ffe8;
+  margin-left: 20px;
+  transition: background-color 0.2s;
+  margin: 20px 0;
+}
+
+#main-page .link-search button:hover {
+  cursor: pointer;
+  background-color: #129b42;
+}
+
+#main-page .link-search {
+  display: flex;
+  justify-content: center;
+}
+
+footer {
+  background-color: #37334a;
+  padding: 20px;
+}
+
+footer .wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: var(--main-width);
+  margin: auto;
+}
+
+footer .wrapper p {
+  font-size: 0.8em;
+}
+
+footer .wrapper a {
+  color: #0fa645;
+}
+
+@media (max-width: 600px) {
+  #main-page .jumbotron .slogan-img {
+    display: none;
+  }
+
+  #main-page .jumbotron,
+  #main-page .explore,
+  footer .wrapper {
+    width: var(--small-screen-width);
+  }
+
+  #main-page .explore {
+    margin: auto;
+  }
+
+  #main-page .explore .row {
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: none;
+    width: 100%;
+  }
+}
+
+/* Main Page ### End ### */
 
 /* Search Form ### Start ### */
 #search-form {
@@ -341,10 +449,6 @@ a {
 }
 
 /* Search Form ### End ### */
-
-/* Search Results ### Start ### */
-
-/* Search Results ### End ### */
 
 /* User Form ### Start */
 .user-form form {
