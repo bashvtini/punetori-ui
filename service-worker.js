@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/punetori-ui/precache-manifest.704c38497f5ad912b69b6d5646641d8a.js"
+  "/punetori-ui/precache-manifest.0989b0df33b7bbf2b324c26114d12d1e.js"
 );
 
 self.addEventListener('message', (event) => {

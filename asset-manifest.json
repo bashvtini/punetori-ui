@@ -1,27 +1,31 @@
 {
   "files": {
-    "main.css": "/punetori-ui/static/css/main.1fb3d660.chunk.css",
-    "main.js": "/punetori-ui/static/js/main.dd9ea758.chunk.js",
-    "main.js.map": "/punetori-ui/static/js/main.dd9ea758.chunk.js.map",
+    "main.css": "/punetori-ui/static/css/main.8f77d955.chunk.css",
+    "main.js": "/punetori-ui/static/js/main.7eabc34e.chunk.js",
+    "main.js.map": "/punetori-ui/static/js/main.7eabc34e.chunk.js.map",
     "runtime-main.js": "/punetori-ui/static/js/runtime-main.b2236734.js",
     "runtime-main.js.map": "/punetori-ui/static/js/runtime-main.b2236734.js.map",
-    "static/js/2.1aae2980.chunk.js": "/punetori-ui/static/js/2.1aae2980.chunk.js",
-    "static/js/2.1aae2980.chunk.js.map": "/punetori-ui/static/js/2.1aae2980.chunk.js.map",
+    "static/js/2.269d832b.chunk.js": "/punetori-ui/static/js/2.269d832b.chunk.js",
+    "static/js/2.269d832b.chunk.js.map": "/punetori-ui/static/js/2.269d832b.chunk.js.map",
     "index.html": "/punetori-ui/index.html",
-    "precache-manifest.704c38497f5ad912b69b6d5646641d8a.js": "/punetori-ui/precache-manifest.704c38497f5ad912b69b6d5646641d8a.js",
+    "precache-manifest.0989b0df33b7bbf2b324c26114d12d1e.js": "/punetori-ui/precache-manifest.0989b0df33b7bbf2b324c26114d12d1e.js",
     "service-worker.js": "/punetori-ui/service-worker.js",
-    "static/css/main.1fb3d660.chunk.css.map": "/punetori-ui/static/css/main.1fb3d660.chunk.css.map",
-    "static/js/2.1aae2980.chunk.js.LICENSE.txt": "/punetori-ui/static/js/2.1aae2980.chunk.js.LICENSE.txt",
+    "static/css/main.8f77d955.chunk.css.map": "/punetori-ui/static/css/main.8f77d955.chunk.css.map",
+    "static/js/2.269d832b.chunk.js.LICENSE.txt": "/punetori-ui/static/js/2.269d832b.chunk.js.LICENSE.txt",
     "static/media/bookmark.svg": "/punetori-ui/static/media/bookmark.6f770f93.svg",
     "static/media/eye-off.svg": "/punetori-ui/static/media/eye-off.60923ccb.svg",
     "static/media/eye.svg": "/punetori-ui/static/media/eye.5380c6d1.svg",
+    "static/media/it-girl.svg": "/punetori-ui/static/media/it-girl.735e245a.svg",
     "static/media/menu.svg": "/punetori-ui/static/media/menu.15028421.svg",
-    "static/media/search.svg": "/punetori-ui/static/media/search.bdbd9ca9.svg"
+    "static/media/pc.svg": "/punetori-ui/static/media/pc.ba60edd2.svg",
+    "static/media/printer.svg": "/punetori-ui/static/media/printer.97f904d5.svg",
+    "static/media/search.svg": "/punetori-ui/static/media/search.bdbd9ca9.svg",
+    "static/media/toolbox.svg": "/punetori-ui/static/media/toolbox.65ff2b2a.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.b2236734.js",
-    "static/js/2.1aae2980.chunk.js",
-    "static/css/main.1fb3d660.chunk.css",
-    "static/js/main.dd9ea758.chunk.js"
+    "static/js/2.269d832b.chunk.js",
+    "static/css/main.8f77d955.chunk.css",
+    "static/js/main.7eabc34e.chunk.js"
   ]
 }
