@@ -260,7 +260,8 @@ a {
   width: 100px;
 }
 
-#main-page .link-search button {
+#main-page .link-search button,
+.delete-modal button {
   background-color: #12ad47;
   padding: 10px 25px;
   border: none;
@@ -271,7 +272,8 @@ a {
   margin: 20px 0;
 }
 
-#main-page .link-search button:hover {
+#main-page .link-search button:hover,
+.delete-modal button:hover {
   cursor: pointer;
   background-color: #129b42;
 }
@@ -463,6 +465,7 @@ footer .wrapper a {
 /* Search Form ### End ### */
 
 /* User Form ### Start */
+
 .user-form form {
   width: 400px;
   margin: 50px auto;
@@ -485,6 +488,28 @@ footer .wrapper a {
   border: 1px solid #2622368f;
   border-radius: 3px;
   /* font-size: 16px; */
+}
+
+.user-form form .check {
+  background-color: #37334a;
+  border-radius: 3px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #2622368f;
+  margin-top: 0;
+  transition: background-color 0.4s;
+}
+
+.user-form form .check img {
+  width: 15px;
+}
+
+.user-form form .check:hover {
+  background-color: #292638;
+  cursor: pointer;
 }
 
 .user-form form button {
@@ -656,3 +681,27 @@ footer .wrapper a {
 }
 
 /* Job Table ### End ### */
+
+.delete {
+  background-color: #9b1212 !important;
+}
+.delete-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #302c45ec;
+  width: 100vw;
+  height: 100vh;
+  z-index: 6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.delete-modal .delete {
+  margin-right: 20px;
+}

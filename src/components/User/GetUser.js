@@ -1,13 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import Cookies from "universal-cookie";
 import Header from "../other/Header";
 import { Link } from "react-router-dom";
+import CheckIcon from "../../assets/img/check.svg";
+import { Context } from "../Context";
 
 export default function Register({ history }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [jobTitle, setJobTitle] = useState("");
+  const [sendEmail, setSendEmail] = useState(false);
+
+  const [deleteModal, setDeleteModal] = useState(false);
 
   const [emptyName, setemptyName] = useState(false);
   const [emptyEmail, setEmptyEmail] = useState(false);
@@ -18,6 +23,8 @@ export default function Register({ history }) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
+
+  const { setState } = useContext(Context);
 
   const submit = async (form) => {
     form.preventDefault();
@@ -78,6 +85,7 @@ export default function Register({ history }) {
           name,
           email,
           jobTitle,
+          sendEmail,
         },
         {
           headers: {
@@ -110,11 +118,31 @@ export default function Register({ history }) {
       },
     });
 
-    const { name, email, jobTitle } = data.data.user;
+    const { name, email, jobTitle, sendEmail } = data.data.user;
 
     setName(name);
     setEmail(email);
     setJobTitle(jobTitle);
+    setSendEmail(sendEmail);
+  };
+
+  const deleteAccount = async () => {
+    const cookie = new Cookies();
+    const token = cookie.get("token");
+    const api = window.API_URL;
+    try {
+      await axios.delete(`${api}auth/remove`, {
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: "Bearer " + token,
+        },
+      });
+      cookie.remove("token");
+      setState("token", null);
+      history.push("/");
+    } catch (error) {
+      console.log("Something went wrong");
+    }
   };
 
   useEffect(() => {
@@ -133,9 +161,34 @@ export default function Register({ history }) {
   return (
     <div id="user-detail" className="user-form">
       <Header history={history} />
+      {deleteModal ? (
+        <div className="delete-modal">
+          <h1>Are you shure you want to delete your account</h1>
+          <div>
+            <button className="delete" onClick={() => deleteAccount()}>
+              Yes
+            </button>
+            <button onClick={() => setDeleteModal(false)}>No</button>
+          </div>
+        </div>
+      ) : null}
 
       <form onSubmit={submit}>
-        <h1>User Detail</h1>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+          }}
+        >
+          <h1>User Detail</h1>
+          <button
+            className="delete"
+            type="button"
+            onClick={() => setDeleteModal(true)}
+          >
+            Delete Account
+          </button>
+        </div>
         <div className="name">
           <p>Full Name</p>
           <input
@@ -184,6 +237,13 @@ export default function Register({ history }) {
               <p>Please provide a job title</p>
             </div>
           ) : null}
+        </div>
+
+        <div className="send-emails">
+          <p>Send Email</p>
+          <div className="check" onClick={() => setSendEmail(!sendEmail)}>
+            {sendEmail ? <img src={CheckIcon} alt="Check Icon" /> : null}
+          </div>
         </div>
 
         <div className="submit">
