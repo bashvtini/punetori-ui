@@ -12,6 +12,8 @@ export default class Provider extends Component {
     searchError: false,
     token: null,
     dropdownMenu: false,
+    verifySuccess: false,
+    verifyError: false,
     setState: (state, data) => {
       switch (state) {
         case "jobs":
@@ -34,6 +36,12 @@ export default class Provider extends Component {
           break;
         case "dropdown":
           this.setState({ dropdownMenu: data });
+          break;
+        case "verifySuccess":
+          this.setState({ verifySuccess: data });
+          break;
+        case "verifyError":
+          this.setState({ verifyError: data });
           break;
         default:
           break;

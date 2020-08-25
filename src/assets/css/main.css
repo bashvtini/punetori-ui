@@ -376,6 +376,27 @@ footer .wrapper a {
   background-color: #129b42;
 }
 
+#search-form select {
+  background-color: #37334a;
+  border: 1px solid #2d293f;
+  padding: 10px;
+  width: 100%;
+}
+
+#search-form .more-info {
+  display: flex;
+  margin: 0;
+  width: 100%;
+}
+#search-form .more-info div {
+  width: 100%;
+  margin: 0 auto;
+}
+
+#search-form .more-info div:first-of-type {
+  margin: 0 10px !important;
+}
+
 .empty-input {
   position: absolute !important;
   padding: 5px;
@@ -635,7 +656,6 @@ footer .wrapper a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 100%;
 }
 
 .job-table .jobs-wrapper .jobs li a {
@@ -705,3 +725,39 @@ footer .wrapper a {
 .delete-modal .delete {
   margin-right: 20px;
 }
+
+/* Signup Page ### Start ### */
+#register select {
+  background-color: #37334a;
+  border: 1px solid #2d293f;
+  padding: 10px;
+  width: 100%;
+}
+
+#register .more-info {
+  display: flex;
+  margin: 0;
+}
+#register .more-info div {
+  width: 100%;
+  margin: 0 auto;
+}
+
+#register .more-info div:first-of-type {
+  margin-right: 5px !important;
+}
+
+/* Signup Page ### End ### */
+
+/* Dashboard ### Start ### */
+#dashboard .container {
+  width: var(--main-width);
+  margin: auto;
+}
+
+@media (max-width: 600px) {
+  #dashboard .container {
+    width: var(--small-screen-width);
+  }
+}
+/* Dashboard ### End ### */

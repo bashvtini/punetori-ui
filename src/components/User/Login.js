@@ -18,7 +18,7 @@ export default function Login({ history }) {
   const [invalidEmail, setInvalidEmail] = useState(false);
   const [invalidPassword, setInvalidPassword] = useState(false);
 
-  const { setState, token } = useContext(Context);
+  const { setState } = useContext(Context);
 
   const submit = async (form) => {
     form.preventDefault();
@@ -91,6 +91,8 @@ export default function Login({ history }) {
   };
 
   useEffect(() => {
+    const cookie = new Cookies();
+    const token = cookie.get("token");
     if (token) {
       history.push("/");
     }

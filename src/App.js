@@ -11,6 +11,8 @@ import ForgotPassword from "./components/User/ForgotPassword";
 import ResetPassword from "./components/User/ResetPassword";
 import UserJobs from "./components/User/UserJobs";
 import BookmarkedJobs from "./components/User/BookmarkedJobs";
+import VerifyAccount from "./components/User/VerifyAccount";
+import NotFound from "./components/other/NotFound";
 
 export default function App() {
   return (
@@ -21,12 +23,14 @@ export default function App() {
           <Route exact path="/search" component={Search} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/register" component={Register} />
+          <Route exact path="/verify/:token" component={VerifyAccount} />
           <Route exact path="/account" component={GetUser} />
           <Route exact path="/account/password" component={UpdatePassword} />
           <Route exact path="/account/jobs" component={UserJobs} />
           <Route exact path="/account/bookmark" component={BookmarkedJobs} />
           <Route exact path="/forgotpassword" component={ForgotPassword} />
           <Route exact path="/resetpassword/:token" component={ResetPassword} />
+          <Route exact path="*" component={NotFound} />
         </Switch>
       </Router>
     </Provider>

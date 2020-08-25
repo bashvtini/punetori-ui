@@ -27,9 +27,9 @@ export default function Results() {
 
             <ul className="jobs">
               {jobs.map((job, index) => (
-                <li>
+                <li key={index}>
                   {/* eslint-disable-next-line */}
-                  <a href={job.link} key={index} target="_blank">
+                  <a href={job.link} target="_blank">
                     <p>{job.title}</p>
                   </a>
                 </li>

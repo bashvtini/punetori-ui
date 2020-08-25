@@ -6,6 +6,8 @@ import { Context } from "../Context";
 export default function Form() {
   const [query, setquery] = useState("");
   const [emptyQuery, setEmptyQuery] = useState(false);
+  const [city, setCity] = useState("");
+  const [type, setType] = useState(0);
 
   const { setState, reset } = useContext(Context);
 
@@ -25,7 +27,9 @@ export default function Form() {
 
     try {
       const api = window.API_URL;
-      const data = await axios.get(`${api}search/${query}`);
+      const data = await axios.get(
+        `${api}search/${query}?city=${city}&type=${type}`
+      );
       setState("jobs", data.data.data);
       setState("query", query);
       setState("count", data.data.count);
@@ -35,6 +39,39 @@ export default function Form() {
 
     setState("search-loading", false);
   };
+
+  const availableCity = [
+    "",
+    "tirane",
+    "durres",
+    "elbasan",
+    "fier",
+    "gjirokaster",
+    "kavaje",
+    "korce",
+    "kruje",
+    "kukes",
+    "lezhe",
+    "lushnje",
+    "permet",
+    "peshkopi",
+    "pogradec",
+    "puke",
+    "sarande",
+    "shkoder",
+    "skrapar",
+    "tepelene",
+    "tirane",
+    "tropoje",
+    "vlore",
+  ];
+
+  const availableType = [
+    { name: "Select Type", value: 0 },
+    { name: "Full time", value: 1 }, // Full time
+    { name: "Part time", value: 2 }, // Part time
+    { name: "Intership", value: 3 }, // Intership
+  ];
 
   return (
     <div id="search-form">
@@ -53,6 +90,42 @@ export default function Form() {
               <p>Please provide a search query</p>
             </div>
           ) : null}
+        </div>
+
+        <div className="more-info">
+          <div className="city">
+            <select
+              onChange={(e) => {
+                if (e.target.value !== "") {
+                  setCity(e.target.value);
+                }
+              }}
+            >
+              {availableCity.map((option, index) => (
+                <option value={option} key={index}>
+                  {option === "" ? "Select City" : null}
+                  {option.charAt(0).toUpperCase() + option.slice(1)}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          <div className="type">
+            <select
+              onChange={(e) => {
+                if (e.target.value !== 0) {
+                  setType(e.target.value);
+                }
+              }}
+            >
+              {availableType.map((option, index) => (
+                <option value={option.value} key={index}>
+                  {option === 0 ? "Select Type" : null}
+                  {option.name}
+                </option>
+              ))}
+            </select>
+          </div>
         </div>
 
         <button>Search</button>

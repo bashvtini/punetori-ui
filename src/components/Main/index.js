@@ -1,21 +1,29 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import Header from "../other/Header";
 import ItGirl from "../../assets/img/it-girl.svg";
 import Toolbox from "../../assets/img/toolbox.svg";
 import Pc from "../../assets/img/pc.svg";
 import Printer from "../../assets/img/printer.svg";
+import { Context } from "../Context";
 
-export default function Index() {
+export default function Index({ history }) {
+  const { token } = useContext(Context);
   return (
     <div id="main-page">
-      <Header />
+      <Header history={history} />
 
       <div className="jumbotron">
         <div className="slogan">
           <h1>Your Passion Begins Here !</h1>
           <p>Get notified via email every time a new job its available.</p>
-          <Link to="/register">Sign Up for free now.</Link>
+          {!token ? (
+            <Link to="/register">Sign Up for free now.</Link>
+          ) : (
+            <Link to="/search" className="link-search">
+              <button>Search Jobs</button>
+            </Link>
+          )}
         </div>
         <div className="slogan-img">
           <img src={ItGirl} alt="It Girl Icon" />

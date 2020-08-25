@@ -1,14 +1,15 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Cookies from "universal-cookie";
 import Header from "../other/Header";
-import { Context } from "../Context";
 
 export default function Register({ history }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [jobTitle, setJobTitle] = useState("");
   const [password, setPassword] = useState("");
+  const [city, setCity] = useState("");
+  const [type, setType] = useState(0);
 
   const [emptyName, setemptyName] = useState(false);
   const [emptyEmail, setEmptyEmail] = useState(false);
@@ -20,8 +21,40 @@ export default function Register({ history }) {
 
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
+  const [success, setSuccess] = useState(false);
 
-  const { setState, token } = useContext(Context);
+  const availableCity = [
+    "",
+    "tirane",
+    "durres",
+    "elbasan",
+    "fier",
+    "gjirokaster",
+    "kavaje",
+    "korce",
+    "kruje",
+    "kukes",
+    "lezhe",
+    "lushnje",
+    "permet",
+    "peshkopi",
+    "pogradec",
+    "puke",
+    "sarande",
+    "shkoder",
+    "skrapar",
+    "tepelene",
+    "tirane",
+    "tropoje",
+    "vlore",
+  ];
+
+  const availableType = [
+    { name: "Select Type", value: 0 },
+    { name: "Full time", value: 1 }, // Full time
+    { name: "Part time", value: 2 }, // Part time
+    { name: "Intership", value: 3 }, // Intership
+  ];
 
   const submit = async (form) => {
     form.preventDefault();
@@ -89,19 +122,17 @@ export default function Register({ history }) {
 
     try {
       const api = window.API_URL;
-      const response = await axios.post(`${api}auth/register`, {
+      await axios.post(`${api}auth/register`, {
         name,
         email,
         jobTitle,
         password,
+        city,
+        type,
       });
 
-      const cookie = new Cookies();
-      cookie.set("token", response.data.token);
-      setState("token", response.data.token);
-
+      setSuccess(true);
       setLoading(false);
-      history.push("/");
     } catch (error) {
       setLoading(false);
       setError(true);
@@ -112,6 +143,8 @@ export default function Register({ history }) {
   };
 
   useEffect(() => {
+    const cookie = new Cookies();
+    const token = cookie.get("token");
     if (token) {
       history.push("/");
     }
@@ -174,6 +207,44 @@ export default function Register({ history }) {
           ) : null}
         </div>
 
+        <div className="more-info">
+          <div className="city">
+            <p>City</p>
+            <select
+              onChange={(e) => {
+                if (e.target.value !== "") {
+                  setCity(e.target.value);
+                }
+              }}
+            >
+              {availableCity.map((option, index) => (
+                <option value={option} key={index}>
+                  {option === "" ? "Select City" : null}
+                  {option.charAt(0).toUpperCase() + option.slice(1)}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          <div className="type">
+            <p>Type</p>
+            <select
+              onChange={(e) => {
+                if (e.target.value !== 0) {
+                  setType(e.target.value);
+                }
+              }}
+            >
+              {availableType.map((option, index) => (
+                <option value={option.value} key={index}>
+                  {option === 0 ? "Select Type" : null}
+                  {option.name}
+                </option>
+              ))}
+            </select>
+          </div>
+        </div>
+
         <div className="password">
           <p>Password</p>
           <input
@@ -201,6 +272,12 @@ export default function Register({ history }) {
           {error ? (
             <div className="empty-input">
               <p>User already exists</p>
+            </div>
+          ) : null}
+
+          {success ? (
+            <div className="empty-input success">
+              <p>Please check your email address</p>
             </div>
           ) : null}
         </div>
