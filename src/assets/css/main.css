@@ -397,6 +397,26 @@ footer .wrapper a {
   margin: 0 10px !important;
 }
 
+@media (max-width: 600px) {
+  #search-form .more-info div:first-of-type {
+    margin: 0 !important;
+  }
+
+  #search-form .more-info {
+    margin-top: 10px;
+  }
+
+  #search-form form {
+    flex-direction: column;
+  }
+
+  #search-form form button {
+    width: 100%;
+    margin: 0;
+    margin-top: 10px;
+  }
+}
+
 .empty-input {
   position: absolute !important;
   padding: 5px;
@@ -468,18 +488,6 @@ footer .wrapper a {
 @media (max-width: 700px) {
   #search-form form {
     width: var(--small-screen-width);
-  }
-}
-
-@media (max-width: 400px) {
-  #search-form form {
-    flex-direction: column;
-  }
-
-  #search-form form button {
-    width: 100%;
-    margin: 0;
-    margin-top: 10px;
   }
 }
 
