@@ -11,13 +11,14 @@ export default function UserJobs({ history }) {
   const [loading, setLoading] = useState(true);
 
   const getJobId = (link) => {
-    if (link.includes("njoftimefalas.com")) {
-      return link.split("oferta-njoftime-pune/")[1];
+    if (link.includes("njoftimefalas")) {
+      const newLink = link.split("/");
+      return newLink[newLink.length - 1];
     }
-    if (link.includes("duapune.com")) {
+    if (link.includes("duapune")) {
       return link.split("/jobs/")[1];
     }
-    if (link.includes("njoftime.com")) {
+    if (link.includes("njoftime")) {
       return link.split("showthread.php?")[1];
     }
   };
@@ -26,6 +27,7 @@ export default function UserJobs({ history }) {
     const cookie = new Cookies();
     const token = cookie.get("token");
     const api = window.API_URL;
+
     if (!jobs[index].bookmarked) {
       try {
         await axios.post(

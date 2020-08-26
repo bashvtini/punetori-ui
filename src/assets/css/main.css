@@ -578,6 +578,56 @@ footer .wrapper a {
   }
 }
 
+#user-detail select {
+  background-color: #37334a;
+  border: 1px solid #2d293f;
+  padding: 10px;
+  width: 100%;
+}
+
+#user-detail .more-info {
+  display: flex;
+  margin: 0;
+  width: 100%;
+}
+#user-detail .more-info div {
+  width: 100%;
+  margin: 0 auto;
+}
+
+#user-detail .more-info div:first-of-type {
+  margin-right: 10px;
+}
+
+#user-detail .head {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 600px) {
+  #user-detail .more-info {
+    flex-direction: column;
+  }
+
+  #user-detail .more-info div:first-of-type {
+    margin: 0 !important;
+  }
+
+  #user-detail .more-info {
+    margin-top: 10px;
+  }
+
+  #user-detail .more-info div {
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 400px) {
+  #user-detail .head {
+    flex-direction: column-reverse;
+  }
+}
+
 /* User Form ### End */
 
 /* Update Password ### Start ### */

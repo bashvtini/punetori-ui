@@ -11,6 +11,8 @@ export default function Register({ history }) {
   const [email, setEmail] = useState("");
   const [jobTitle, setJobTitle] = useState("");
   const [sendEmail, setSendEmail] = useState(false);
+  const [city, setCity] = useState("");
+  const [type, setType] = useState(0);
 
   const [deleteModal, setDeleteModal] = useState(false);
 
@@ -25,6 +27,39 @@ export default function Register({ history }) {
   const [success, setSuccess] = useState(false);
 
   const { setState } = useContext(Context);
+
+  const availableCity = [
+    "",
+    "tirane",
+    "durres",
+    "elbasan",
+    "fier",
+    "gjirokaster",
+    "kavaje",
+    "korce",
+    "kruje",
+    "kukes",
+    "lezhe",
+    "lushnje",
+    "permet",
+    "peshkopi",
+    "pogradec",
+    "puke",
+    "sarande",
+    "shkoder",
+    "skrapar",
+    "tepelene",
+    "tirane",
+    "tropoje",
+    "vlore",
+  ];
+
+  const availableType = [
+    { name: "Select Type", value: 0 },
+    { name: "Full time", value: 1 }, // Full time
+    { name: "Part time", value: 2 }, // Part time
+    { name: "Intership", value: 3 }, // Intership
+  ];
 
   const submit = async (form) => {
     form.preventDefault();
@@ -86,6 +121,8 @@ export default function Register({ history }) {
           email,
           jobTitle,
           sendEmail,
+          jobCity: city,
+          jobType: type,
         },
         {
           headers: {
@@ -118,12 +155,21 @@ export default function Register({ history }) {
       },
     });
 
-    const { name, email, jobTitle, sendEmail } = data.data.user;
+    const {
+      name,
+      email,
+      jobTitle,
+      sendEmail,
+      jobCity,
+      jobType,
+    } = data.data.user;
 
     setName(name);
     setEmail(email);
     setJobTitle(jobTitle);
     setSendEmail(sendEmail);
+    setCity(jobCity);
+    setType(jobType);
   };
 
   const deleteAccount = async () => {
@@ -174,12 +220,7 @@ export default function Register({ history }) {
       ) : null}
 
       <form onSubmit={submit}>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-          }}
-        >
+        <div className="head">
           <h1>User Detail</h1>
           <button
             className="delete"
@@ -243,6 +284,46 @@ export default function Register({ history }) {
           <p>Send Email</p>
           <div className="check" onClick={() => setSendEmail(!sendEmail)}>
             {sendEmail ? <img src={CheckIcon} alt="Check Icon" /> : null}
+          </div>
+        </div>
+
+        <div className="more-info">
+          <div className="city">
+            <p>City</p>
+            <select
+              onChange={(e) => {
+                if (e.target.value !== "") {
+                  setCity(e.target.value);
+                }
+              }}
+              value={city}
+            >
+              {availableCity.map((option, index) => (
+                <option value={option} key={index}>
+                  {option === "" ? "Select City" : null}
+                  {option.charAt(0).toUpperCase() + option.slice(1)}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          <div className="type">
+            <p>Type</p>
+            <select
+              onChange={(e) => {
+                if (e.target.value !== 0) {
+                  setType(e.target.value);
+                }
+              }}
+              value={type}
+            >
+              {availableType.map((option, index) => (
+                <option value={option.value} key={index}>
+                  {option === 0 ? "Select Type" : null}
+                  {option.name}
+                </option>
+              ))}
+            </select>
           </div>
         </div>
 
