@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/punetori-ui/static/css/main.a5e7a487.chunk.css",
-    "main.js": "/punetori-ui/static/js/main.b91a5e69.chunk.js",
-    "main.js.map": "/punetori-ui/static/js/main.b91a5e69.chunk.js.map",
+    "main.js": "/punetori-ui/static/js/main.35117ce6.chunk.js",
+    "main.js.map": "/punetori-ui/static/js/main.35117ce6.chunk.js.map",
     "runtime-main.js": "/punetori-ui/static/js/runtime-main.b2236734.js",
     "runtime-main.js.map": "/punetori-ui/static/js/runtime-main.b2236734.js.map",
     "static/js/2.79ac52d3.chunk.js": "/punetori-ui/static/js/2.79ac52d3.chunk.js",
     "static/js/2.79ac52d3.chunk.js.map": "/punetori-ui/static/js/2.79ac52d3.chunk.js.map",
     "index.html": "/punetori-ui/index.html",
-    "precache-manifest.9b13d1a0e4b377eae5328505a1dbd6bc.js": "/punetori-ui/precache-manifest.9b13d1a0e4b377eae5328505a1dbd6bc.js",
+    "precache-manifest.2237ddb8fdf62b763d2f7ed82c38639d.js": "/punetori-ui/precache-manifest.2237ddb8fdf62b763d2f7ed82c38639d.js",
     "service-worker.js": "/punetori-ui/service-worker.js",
     "static/css/main.a5e7a487.chunk.css.map": "/punetori-ui/static/css/main.a5e7a487.chunk.css.map",
     "static/js/2.79ac52d3.chunk.js.LICENSE.txt": "/punetori-ui/static/js/2.79ac52d3.chunk.js.LICENSE.txt",
@@ -27,6 +27,6 @@
     "static/js/runtime-main.b2236734.js",
     "static/js/2.79ac52d3.chunk.js",
     "static/css/main.a5e7a487.chunk.css",
-    "static/js/main.b91a5e69.chunk.js"
+    "static/js/main.35117ce6.chunk.js"
   ]
 }
