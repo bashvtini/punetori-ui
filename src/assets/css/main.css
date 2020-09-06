@@ -209,7 +209,7 @@ a {
     right: 0;
     top: 0;
 
-    transform: translateY(-200px);
+    transform: translateY(-100%);
 
     display: flex;
     flex-direction: column;
@@ -223,10 +223,12 @@ a {
   .dropdown-menu li {
     width: 100%;
     display: flex;
+    border-bottom: 1px solid var(--bg-mid);
   }
 
   .dropdown-menu li a,
-  .dropdown-menu li p {
+  .dropdown-menu li p,
+  .dropdown-menu .theme {
     padding: 15px;
     width: 100%;
   }
@@ -243,8 +245,8 @@ a {
     left: 0;
     bottom: 0;
     right: 0;
-    background-color: var(--gray6);
-    opacity: 0.5;
+    background-color: rgb(48, 48, 48);
+    opacity: 0.7;
     width: 100vw;
     height: 100vh;
     z-index: 2;
@@ -385,8 +387,7 @@ footer .wrapper a {
   }
 
   #main-page .explore .row {
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-columns: none;
+    grid-template-columns: 1fr 1fr;
     width: 100%;
   }
 }
@@ -465,7 +466,7 @@ footer .wrapper a {
 
 @media (max-width: 600px) {
   #search-form .more-info div:first-of-type {
-    margin: 0 !important;
+    margin: 0 5px 0 0 !important;
   }
 
   #search-form .more-info {
@@ -820,7 +821,7 @@ footer .wrapper a {
   }
 
   .job-table .jobs-wrapper .jobs {
-    overflow-y: show;
+    overflow-y: hidden;
     height: 100%;
   }
 }

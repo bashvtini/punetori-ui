@@ -33,7 +33,6 @@ export default function Header({ history }) {
       history.push("/");
     }
   };
-
   return (
     <React.Fragment>
       <div id="header" className={dropdownMenu ? "test" : ""}>
