@@ -14,6 +14,7 @@ export default class Provider extends Component {
     dropdownMenu: false,
     verifySuccess: false,
     verifyError: false,
+    theme: true,
     setState: (state, data) => {
       switch (state) {
         case "jobs":
@@ -43,6 +44,9 @@ export default class Provider extends Component {
         case "verifyError":
           this.setState({ verifyError: data });
           break;
+        case "theme":
+          this.setState({ theme: data });
+          break;
         default:
           break;
       }
@@ -60,6 +64,21 @@ export default class Provider extends Component {
   componentDidMount() {
     const cookie = new Cookies();
     const token = cookie.get("token");
+    const theme = cookie.get("theme");
+
+    if (!theme) {
+      cookie.set("theme", "light");
+    } else {
+      if (theme === "dark") {
+        this.setState({ theme: false });
+        window.document.querySelector("body").classList.add("dark");
+        cookie.set("theme", "dark");
+      } else {
+        this.setState({ theme: true });
+        window.document.querySelector("body").classList.remove("dark");
+        cookie.set("theme", "light");
+      }
+    }
 
     if (token) {
       this.setState({ token });

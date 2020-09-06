@@ -2,12 +2,27 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../Context";
 import Cookies from "universal-cookie";
+import SunIcon from "../../assets/img/sun.svg";
+import MoonIcon from "../../assets/img/moon.svg";
 
 // DropDownMenu Icon
 import DropDownMenu from "../../assets/img/menu.svg";
 
 export default function Header({ history }) {
-  const { token, setState, dropdownMenu } = useContext(Context);
+  const { token, setState, dropdownMenu, theme } = useContext(Context);
+
+  const changeTheme = () => {
+    const cookie = new Cookies();
+    if (theme) {
+      setState("theme", false);
+      window.document.querySelector("body").classList.add("dark");
+      cookie.set("theme", "dark");
+    } else {
+      setState("theme", true);
+      window.document.querySelector("body").classList.remove("dark");
+      cookie.set("theme", "light");
+    }
+  };
 
   const logout = () => {
     setState("token", null);
@@ -62,6 +77,9 @@ export default function Header({ history }) {
                 </li>
               </React.Fragment>
             )}
+            <li onClick={changeTheme} className="theme">
+              <img src={!theme ? SunIcon : MoonIcon} alt="Theme Icon" />
+            </li>
           </ul>
         </div>
       </div>
@@ -108,6 +126,9 @@ export default function Header({ history }) {
             </li>
           </React.Fragment>
         )}
+        <li onClick={changeTheme} className="theme">
+          <img src={!theme ? SunIcon : MoonIcon} alt="Theme Icon" />
+        </li>
       </ul>
     </React.Fragment>
   );

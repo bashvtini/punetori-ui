@@ -5,6 +5,11 @@ import ItGirl from "../../assets/img/it-girl.svg";
 import Toolbox from "../../assets/img/toolbox.svg";
 import Pc from "../../assets/img/pc.svg";
 import Printer from "../../assets/img/printer.svg";
+import GraphicDesign from "../../assets/img/graphic-design.svg";
+import Kamarier from "../../assets/img/kamarier.svg";
+import Forklift from "../../assets/img/forklift.svg";
+import Search from "../../assets/img/search-white.svg";
+
 import { Context } from "../Context";
 
 export default function Index({ history }) {
@@ -21,13 +26,25 @@ export default function Index({ history }) {
             <Link to="/register">Sign Up for free now.</Link>
           ) : (
             <Link to="/search" className="link-search">
-              <button>Search Jobs</button>
+              <button>
+                <img src={Search} alt="Search Icon" /> Search Jobs
+              </button>
             </Link>
           )}
         </div>
         <div className="slogan-img">
           <img src={ItGirl} alt="It Girl Icon" />
         </div>
+      </div>
+
+      <div className="how-to">
+        <h1>How it Works?</h1>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias,
+          amet quas adipisci eveniet numquam laudantium, quos officiis
+          asperiores harum dicta quisquam sapiente reiciendis consectetur, nihil
+          deleniti et dolores pariatur officia.
+        </p>
       </div>
 
       <div className="explore">
@@ -45,9 +62,23 @@ export default function Index({ history }) {
             <img src={Printer} alt="Printer Icon" />
             <p>Office Worker</p>
           </div>
+          <div className="col">
+            <img src={GraphicDesign} alt="Printer Icon" />
+            <p>Graphic Designer</p>
+          </div>
+          <div className="col">
+            <img src={Kamarier} alt="Printer Icon" />
+            <p>Waiter</p>
+          </div>
+          <div className="col">
+            <img src={Forklift} alt="Printer Icon" />
+            <p>Forklift</p>
+          </div>
         </div>
         <Link to="/search" className="link-search">
-          <button>Search Jobs</button>
+          <button>
+            <img src={Search} alt="Search Icon" /> Search Jobs
+          </button>
         </Link>
       </div>
 
