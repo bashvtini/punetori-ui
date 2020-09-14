@@ -4,6 +4,7 @@ import { Context } from "../Context";
 import Cookies from "universal-cookie";
 import SunIcon from "../../assets/img/sun.svg";
 import MoonIcon from "../../assets/img/moon.svg";
+import ArrowUpIcon from "../../assets/img/arrow-up.svg";
 
 // DropDownMenu Icon
 import DropDownMenu from "../../assets/img/menu.svg";
@@ -54,6 +55,9 @@ export default function Header({ history }) {
             {!token ? (
               <React.Fragment>
                 <li>
+                  <Link to="/search">Search</Link>
+                </li>
+                <li>
                   <Link to="/login">Login</Link>
                 </li>
                 <li>
@@ -62,6 +66,9 @@ export default function Header({ history }) {
               </React.Fragment>
             ) : (
               <React.Fragment>
+                <li>
+                  <Link to="/search">Search</Link>
+                </li>
                 <li>
                   <Link to="/account">My Account</Link>
                 </li>
@@ -103,6 +110,9 @@ export default function Header({ history }) {
         {!token ? (
           <React.Fragment>
             <li>
+              <Link to="/search">Search</Link>
+            </li>
+            <li>
               <Link to="/login">Login</Link>
             </li>
             <li>
@@ -111,6 +121,9 @@ export default function Header({ history }) {
           </React.Fragment>
         ) : (
           <React.Fragment>
+            <li>
+              <Link to="/search">Search</Link>
+            </li>
             <li>
               <Link to="/account">My Account</Link>
             </li>
@@ -129,6 +142,15 @@ export default function Header({ history }) {
           <img src={!theme ? SunIcon : MoonIcon} alt="Theme Icon" />
         </li>
       </ul>
+
+      <div
+        className="goTop"
+        onClick={() => {
+          window.scrollTo(0, 0);
+        }}
+      >
+        <img src={ArrowUpIcon} alt="Arrow Up Icon" />
+      </div>
     </React.Fragment>
   );
 }

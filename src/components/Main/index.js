@@ -37,16 +37,6 @@ export default function Index({ history }) {
         </div>
       </div>
 
-      <div className="how-to">
-        <h1>How it Works?</h1>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias,
-          amet quas adipisci eveniet numquam laudantium, quos officiis
-          asperiores harum dicta quisquam sapiente reiciendis consectetur, nihil
-          deleniti et dolores pariatur officia.
-        </p>
-      </div>
-
       <div className="explore">
         <h3>Explore The Opportunities</h3>
         <div className="row">
@@ -72,7 +62,7 @@ export default function Index({ history }) {
           </div>
           <div className="col">
             <img src={Forklift} alt="Printer Icon" />
-            <p>Forklift</p>
+            <p>Construction Worker</p>
           </div>
         </div>
         <Link to="/search" className="link-search">

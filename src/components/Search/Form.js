@@ -8,6 +8,7 @@ export default function Form() {
   const [emptyQuery, setEmptyQuery] = useState(false);
   const [city, setCity] = useState("");
   const [type, setType] = useState(0);
+  const [jobDate, setJobDate] = useState(1);
 
   const { setState, reset } = useContext(Context);
 
@@ -28,7 +29,7 @@ export default function Form() {
     try {
       const api = window.API_URL;
       const data = await axios.get(
-        `${api}search/${query}?city=${city}&type=${type}`
+        `${api}search/${query}?city=${city}&type=${type}&jobDate=${jobDate}`
       );
       setState("jobs", data.data.data);
       setState("query", query);
@@ -71,6 +72,37 @@ export default function Form() {
     { name: "Full time", value: 1 }, // Full time
     { name: "Part time", value: 2 }, // Part time
     { name: "Intership", value: 3 }, // Intership
+  ];
+
+  const availableDates = [
+    {
+      name: "1 Dite",
+      value: 1,
+    },
+    {
+      name: "2 Dite",
+      value: 2,
+    },
+    {
+      name: "7 Dite",
+      value: 7,
+    },
+    {
+      name: "2 Jave",
+      value: 14,
+    },
+    {
+      name: "1 Muaj",
+      value: 30,
+    },
+    {
+      name: "1.5 Muaj",
+      value: 45,
+    },
+    {
+      name: "2 Muaj",
+      value: 60,
+    },
   ];
 
   return (
@@ -120,7 +152,22 @@ export default function Form() {
             >
               {availableType.map((option, index) => (
                 <option value={option.value} key={index}>
-                  {option === 0 ? "Select Type" : null}
+                  {option === 1 ? "Select Type" : null}
+                  {option.name}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          <div className="jobDate">
+            <select
+              onChange={(e) => {
+                setJobDate(e.target.value);
+              }}
+            >
+              {availableDates.map((option, index) => (
+                <option value={option.value} key={index}>
+                  {/* {option === 0 ? "Select Date" : null} */}
                   {option.name}
                 </option>
               ))}
