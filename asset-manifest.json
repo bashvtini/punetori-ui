@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/punetori-ui/static/css/main.b5016c5f.chunk.css",
-    "main.js": "/punetori-ui/static/js/main.632f6a93.chunk.js",
-    "main.js.map": "/punetori-ui/static/js/main.632f6a93.chunk.js.map",
+    "main.css": "/punetori-ui/static/css/main.41f69b6c.chunk.css",
+    "main.js": "/punetori-ui/static/js/main.29a4dcb6.chunk.js",
+    "main.js.map": "/punetori-ui/static/js/main.29a4dcb6.chunk.js.map",
     "runtime-main.js": "/punetori-ui/static/js/runtime-main.b2236734.js",
     "runtime-main.js.map": "/punetori-ui/static/js/runtime-main.b2236734.js.map",
-    "static/js/2.1a35f237.chunk.js": "/punetori-ui/static/js/2.1a35f237.chunk.js",
-    "static/js/2.1a35f237.chunk.js.map": "/punetori-ui/static/js/2.1a35f237.chunk.js.map",
+    "static/js/2.67dd7012.chunk.js": "/punetori-ui/static/js/2.67dd7012.chunk.js",
+    "static/js/2.67dd7012.chunk.js.map": "/punetori-ui/static/js/2.67dd7012.chunk.js.map",
     "index.html": "/punetori-ui/index.html",
-    "precache-manifest.c0820e8f85852605b8852291c1479acb.js": "/punetori-ui/precache-manifest.c0820e8f85852605b8852291c1479acb.js",
+    "precache-manifest.5422749c298184fd3ec1a98c27d7c25f.js": "/punetori-ui/precache-manifest.5422749c298184fd3ec1a98c27d7c25f.js",
     "service-worker.js": "/punetori-ui/service-worker.js",
-    "static/css/main.b5016c5f.chunk.css.map": "/punetori-ui/static/css/main.b5016c5f.chunk.css.map",
-    "static/js/2.1a35f237.chunk.js.LICENSE.txt": "/punetori-ui/static/js/2.1a35f237.chunk.js.LICENSE.txt",
+    "static/css/main.41f69b6c.chunk.css.map": "/punetori-ui/static/css/main.41f69b6c.chunk.css.map",
+    "static/js/2.67dd7012.chunk.js.LICENSE.txt": "/punetori-ui/static/js/2.67dd7012.chunk.js.LICENSE.txt",
+    "static/media/arrow-up.svg": "/punetori-ui/static/media/arrow-up.b380d955.svg",
     "static/media/bookmark.svg": "/punetori-ui/static/media/bookmark.6f770f93.svg",
     "static/media/check.svg": "/punetori-ui/static/media/check.ec630455.svg",
     "static/media/eye-off.svg": "/punetori-ui/static/media/eye-off.60923ccb.svg",
@@ -31,8 +32,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.b2236734.js",
-    "static/js/2.1a35f237.chunk.js",
-    "static/css/main.b5016c5f.chunk.css",
-    "static/js/main.632f6a93.chunk.js"
+    "static/js/2.67dd7012.chunk.js",
+    "static/css/main.41f69b6c.chunk.css",
+    "static/js/main.29a4dcb6.chunk.js"
   ]
 }

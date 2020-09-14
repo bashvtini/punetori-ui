@@ -1,27 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "70ab47371e4ad67269a6717fda1de19b",
+    "revision": "091e82b6118add7c37223c8a1d3127db",
     "url": "/punetori-ui/index.html"
   },
   {
-    "revision": "697ab28762cedad8295c",
-    "url": "/punetori-ui/static/css/main.b5016c5f.chunk.css"
+    "revision": "6d8d9160679e50f1d1a1",
+    "url": "/punetori-ui/static/css/main.41f69b6c.chunk.css"
   },
   {
-    "revision": "2edb2161e49aafcb230c",
-    "url": "/punetori-ui/static/js/2.1a35f237.chunk.js"
+    "revision": "828f6ebaa97e70039e9e",
+    "url": "/punetori-ui/static/js/2.67dd7012.chunk.js"
   },
   {
     "revision": "ef7f0128066dad638e14e7838f835a83",
-    "url": "/punetori-ui/static/js/2.1a35f237.chunk.js.LICENSE.txt"
+    "url": "/punetori-ui/static/js/2.67dd7012.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "697ab28762cedad8295c",
-    "url": "/punetori-ui/static/js/main.632f6a93.chunk.js"
+    "revision": "6d8d9160679e50f1d1a1",
+    "url": "/punetori-ui/static/js/main.29a4dcb6.chunk.js"
   },
   {
     "revision": "4c96ee98a378f545e160",
     "url": "/punetori-ui/static/js/runtime-main.b2236734.js"
+  },
+  {
+    "revision": "b380d955cce39bf34b884be927997370",
+    "url": "/punetori-ui/static/media/arrow-up.b380d955.svg"
   },
   {
     "revision": "6f770f93df654b93a60146c84d7ff8de",
