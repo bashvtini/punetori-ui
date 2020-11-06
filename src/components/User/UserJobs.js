@@ -100,7 +100,7 @@ export default function UserJobs({ history }) {
     <div id="user-jobs" className="job-table">
       <Header history={history} />
 
-      <div className="jobs-wrapper">
+      <div className="jobs-wrapper container">
         {loading ? (
           <div className="loading">
             <div className="loader"></div>

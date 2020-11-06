@@ -37,7 +37,7 @@ export default function Header({ history }) {
   return (
     <React.Fragment>
       <div id="header" className={dropdownMenu ? "test" : ""}>
-        <div className="header-container">
+        <div className="header-container container">
           <div className="logo">
             <h2>
               <Link to="/">Punetori</Link>

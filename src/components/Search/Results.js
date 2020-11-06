@@ -13,7 +13,7 @@ export default function Results() {
           <div className="loader"></div>
         </div>
       ) : null}
-      <div className="jobs-wrapper">
+      <div className="jobs-wrapper container">
         {searchError ? (
           <h1 style={{ textAlign: "center" }}>Nothing was found</h1>
         ) : null}

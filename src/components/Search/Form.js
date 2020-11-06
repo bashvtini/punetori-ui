@@ -107,7 +107,7 @@ export default function Form() {
 
   return (
     <div id="search-form">
-      <form onSubmit={submit}>
+      <form onSubmit={submit} className="container">
         <div className="search-query">
           <img src={SearchIcon} alt="Search Icon" />
           <input

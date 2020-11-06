@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
 
 :root {
-  --main-width: 700px;
+  --main-width: 800px;
   --small-screen-width: 90vw;
   --main-color: #12ad47;
 }
@@ -42,6 +42,17 @@ body {
 
 *:focus {
   outline: none;
+}
+
+.container {
+  width: var(--main-width);
+  margin: auto;
+}
+
+@media (max-width: 800px) {
+  .container {
+    width: var(--small-screen-width);
+  }
 }
 
 /* body {
@@ -144,8 +155,6 @@ a {
 }
 
 #header .header-container {
-  width: var(--main-width);
-  margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -212,10 +221,6 @@ a {
     width: 15px;
   }
 
-  #header .header-container {
-    width: var(--small-screen-width);
-  }
-
   #header .dropdown-button {
     display: block;
   }
@@ -279,7 +284,6 @@ a {
 /* Main Page ### Start ### */
 #main-page .jumbotron {
   display: flex;
-  width: var(--main-width);
   margin: 50px auto;
   justify-content: space-between;
   align-items: center;
@@ -292,7 +296,32 @@ a {
 #main-page .jumbotron .slogan a {
   color: #0fa645;
   padding: 10px 0;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+}
+
+#main-page .jumbotron .slogan a img {
+  margin-left: 10px;
+  width: 20px;
+}
+
+#main-page .path {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  padding-bottom: 100px;
+}
+
+#main-page .path li {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+#main-page .path li p {
+  font-size: 0.85em;
+  margin-top: 10px;
 }
 
 #main-page .explore h3 {
@@ -304,8 +333,6 @@ a {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 5px;
-  width: var(--main-width);
-  margin: auto;
 }
 
 #main-page .explore .row .col {
@@ -364,6 +391,82 @@ a {
   justify-content: center;
 }
 
+#main-page .news-letter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  background-color: var(--bg-mid);
+  border: 1px solid var(--bg-soft);
+  padding: 50px 0;
+  margin: 50px auto;
+}
+
+#main-page .news-letter h2 {
+  margin-bottom: 10px;
+}
+
+#main-page .news-letter div {
+  display: flex;
+  background-color: var(--bg);
+  border: 1px solid var(--bg-soft);
+
+  border-radius: 3px;
+  padding: 5px;
+}
+
+#main-page .news-letter div img {
+  width: 20px;
+}
+
+#main-page .news-letter div input {
+  background-color: var(--bg);
+  border: 0;
+  margin: 0 10px;
+}
+
+#main-page .news-letter div .btn {
+  background-color: var(--main-color);
+  cursor: pointer;
+  border: 0;
+  transition: background-color 0.4s;
+}
+
+#main-page .news-letter div .btn:hover {
+  background-color: #129b42;
+}
+
+#main-page .news-letter div .btn img {
+  margin-right: 5px;
+}
+
+#main-page .news-letter div .btn p {
+  color: white;
+}
+
+#main-page .ready {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+#main-page .ready a {
+  background-color: var(--main-color);
+  padding: 10px 25px;
+  border: none;
+  border-radius: 3px;
+  color: #d6ffe8;
+  margin-left: 20px;
+  transition: background-color 0.2s;
+  margin: 20px 0;
+}
+
+#main-page .ready a:hover {
+  background-color: #129b42;
+}
+
 footer {
   background-color: var(--bg-mid);
   padding: 20px;
@@ -372,8 +475,6 @@ footer {
 footer .wrapper {
   display: flex;
   justify-content: space-between;
-  width: var(--main-width);
-  margin: auto;
 }
 
 footer .wrapper p {
@@ -425,8 +526,6 @@ footer .wrapper a {
 #search-form form {
   display: flex;
   align-items: center;
-  width: var(--main-width);
-  margin: auto;
 }
 
 #search-form form .search-query {
@@ -773,7 +872,6 @@ footer .wrapper a {
 /* Job Table ### Start ### */
 
 .job-table .jobs-wrapper {
-  width: var(--main-width);
   margin: 50px auto 0 auto;
 }
 
@@ -912,16 +1010,3 @@ footer .wrapper a {
 }
 
 /* Signup Page ### End ### */
-
-/* Dashboard ### Start ### */
-#dashboard .container {
-  width: var(--main-width);
-  margin: auto;
-}
-
-@media (max-width: 700px) {
-  #dashboard .container {
-    width: var(--small-screen-width);
-  }
-}
-/* Dashboard ### End ### */
