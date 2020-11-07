@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "cc72d5f8d3e5405995c435b69573f551",
+    "revision": "0794e5682a2c607a55d22050b2873a47",
     "url": "/punetori-ui/index.html"
   },
   {
-    "revision": "67e9323e01b103d6fcbd",
-    "url": "/punetori-ui/static/css/main.52ac3622.chunk.css"
+    "revision": "2932450237780b23f35b",
+    "url": "/punetori-ui/static/css/main.04a6cd37.chunk.css"
   },
   {
-    "revision": "bc225373a6f0d0f55cb6",
-    "url": "/punetori-ui/static/js/2.c904d256.chunk.js"
+    "revision": "84aab91f14b197b9ca66",
+    "url": "/punetori-ui/static/js/2.bbbe99db.chunk.js"
   },
   {
     "revision": "ef7f0128066dad638e14e7838f835a83",
-    "url": "/punetori-ui/static/js/2.c904d256.chunk.js.LICENSE.txt"
+    "url": "/punetori-ui/static/js/2.bbbe99db.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "67e9323e01b103d6fcbd",
-    "url": "/punetori-ui/static/js/main.6ee83381.chunk.js"
+    "revision": "2932450237780b23f35b",
+    "url": "/punetori-ui/static/js/main.a3290081.chunk.js"
   },
   {
     "revision": "4c96ee98a378f545e160",
