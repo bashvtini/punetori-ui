@@ -146,7 +146,7 @@ export default function Header({ history }) {
       <div
         className="goTop"
         onClick={() => {
-          window.scrollTo(0, 0);
+          window.scrollTo({ top: 0, behavior: "smooth" });
         }}
       >
         <img src={ArrowUpIcon} alt="Arrow Up Icon" />

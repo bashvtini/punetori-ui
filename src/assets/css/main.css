@@ -214,7 +214,11 @@ a {
     background-color: var(--main-color);
     border-radius: 50%;
     display: flex;
-    padding: 15px;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    z-index: 1;
   }
 
   .goTop img {
@@ -490,6 +494,26 @@ footer .wrapper a {
   width: var(--main-width);
   margin: auto;
   margin-bottom: 50px;
+}
+
+@media (max-width: 600px) {
+  #main-page .path {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #main-page .news-letter h2 {
+    font-size: 1em;
+    text-align: center;
+  }
+
+  #main-page .news-letter .btn p {
+    display: none;
+  }
+
+  #main-page .ready {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
 @media (max-width: 700px) {

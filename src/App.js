@@ -13,11 +13,13 @@ import UserJobs from "./components/User/UserJobs";
 import BookmarkedJobs from "./components/User/BookmarkedJobs";
 import VerifyAccount from "./components/User/VerifyAccount";
 import NotFound from "./components/other/NotFound";
+import ScrollToTop from "./components/other/ScrollToTop";
 
 export default function App() {
   return (
     <Provider>
       <Router>
+        <ScrollToTop />
         <Switch>
           <Route exact path="/" component={Main} />
           <Route exact path="/search" component={Search} />
